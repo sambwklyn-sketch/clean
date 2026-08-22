@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b6eff">
+  <meta name="description" content="خدمات تنظيف بالبخار وتنظيف المنازل والخزانات والعزل ومكافحة الحشرات في مكة المكرمة">
+  <title>لمعة مكة | خدمات تنظيف وعزل ومكافحة حشرات</title>
+  <style>
+    :root {
+      --blue: #1268e8;
+      --deep: #08295c;
+      --cyan: #27c6df;
+      --green: #16b866;
+      --ink: #102647;
+      --muted: #61718b;
+      --paper: #ffffff;
+      --soft: #f1f7ff;
+      --line: #dce8f5;
+      --shadow: 0 22px 60px rgba(10, 55, 111, .16);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 12%, rgba(39,198,223,.18), transparent 25rem),
+        radial-gradient(circle at 90% 80%, rgba(18,104,232,.11), transparent 28rem),
+        #eaf3fc;
+      font-family: Tahoma, Arial, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page {
+      position: relative;
+      width: min(1120px, calc(100% - 28px));
+      margin: 28px auto;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+    .side-orb {
+      position: absolute;
+      z-index: 0;
+      width: 190px;
+      height: 190px;
+      border: 20px solid rgba(39,198,223,.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .orb-one { top: 265px; right: -112px; }
+    .orb-two { bottom: 120px; left: -125px; border-color: rgba(18,104,232,.09); }
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 420px;
+      padding: 35px clamp(24px, 6vw, 72px) 48px;
+      color: #fff;
+      background:
+        linear-gradient(120deg, rgba(5,28,70,.94), rgba(18,104,232,.87)),
+        radial-gradient(circle at 78% 20%, #29cedc, transparent 21rem);
+      isolation: isolate;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -4% -68px -4%;
+      height: 120px;
+      background: var(--paper);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+      z-index: -1;
+    }
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      font-size: 13px;
+      opacity: .92;
+    }
+    .brand { font-weight: 900; letter-spacing: .5px; }
+    .location {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 99px;
+      background: rgba(255,255,255,.1);
+    }
+    .hero-content { max-width: 650px; margin-top: 48px; }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 13px;
+      padding: 5px 13px;
+      color: #062b61;
+      background: #9af0f1;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    h1 {
+      max-width: 640px;
+      margin: 0 0 15px;
+      font-size: clamp(32px, 6vw, 61px);
+      line-height: 1.15;
+      letter-spacing: -.9px;
+    }
+    .hero p { max-width: 570px; margin: 0; color: #dceeff; font-size: clamp(15px, 2vw, 19px); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 11px 20px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 900;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,.17); }
+    .btn-call { color: #fff; background: var(--blue); }
+    .btn-wa { color: #fff; background: var(--green); }
+    .btn-light { color: var(--deep); background: #fff; }
+    .content { position: relative; z-index: 1; padding: 8px clamp(20px, 5vw, 64px) 36px; }
+    .section-title { margin: 11px 0 20px; font-size: clamp(22px, 3vw, 31px); line-height: 1.25; }
+    .section-title span { color: var(--blue); }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+    .service, .feature {
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: #fff;
+    }
+    .service { padding: 18px 12px; text-align: center; }
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 9px;
+      border-radius: 16px;
+      background: var(--soft);
+      font-size: 25px;
+    }
+    .service b { display: block; font-size: 14px; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin-top: 35px;
+    }
+    .feature { display: flex; align-items: flex-start; gap: 12px; padding: 17px; }
+    .feature .check { color: #fff; background: var(--blue); flex: 0 0 30px; font-size: 17px; }
+    .feature strong { display: block; font-size: 15px; }
+    .feature small { display: block; color: var(--muted); font-size: 12px; line-height: 1.5; }
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 36px;
+      padding: 22px 25px;
+      border-radius: 20px;
+      color: #fff;
+      background: linear-gradient(100deg, #08346f, #0e81c6);
+    }
+    .contact h2 { margin: 0 0 3px; font-size: 21px; }
+    .contact p { margin: 0; color: #d4edff; font-size: 13px; }
+    .number { direction: ltr; unicode-bidi: embed; display: block; margin-top: 3px; font-size: 25px; font-weight: 900; letter-spacing: 1px; }
+    .contact .hero-actions { margin: 0; }
+    footer { padding-top: 24px; color: var(--muted); text-align: center; font-size: 12px; }
+    .float-wa {
+      position: fixed;
+      z-index: 5;
+      left: 18px;
+      bottom: 18px;
+      display: grid;
+      place-items: center;
+      width: 55px;
+      height: 55px;
+      color: #fff;
+      background: var(--green);
+      border: 4px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0,0,0,.2);
+      font-size: 25px;
+    }
+    @media (max-width: 800px) {
+      .services { grid-template-columns: repeat(3, 1fr); }
+      .features { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .page { width: calc(100% - 14px); margin: 7px auto; border-radius: 22px; }
+      .hero { min-height: 480px; padding: 24px 20px 44px; }
+      .hero-content { margin-top: 55px; }
+      .topline { align-items: flex-start; flex-direction: column; gap: 9px; }
+      .hero-actions, .contact { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; }
+      .content { padding: 8px 16px 27px; }
+      .services { grid-template-columns: repeat(2, 1fr); }
+      .service { padding: 15px 8px; }
+      .contact { padding: 20px; text-align: center; }
+      .contact .hero-actions { gap: 9px; }
+      .number { font-size: 23px; }
+    }
+  </style>
+  <!-- TikTok Pixel Code Start -->
+  <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject = t;
+      var ttq = w[t] = w[t] || [];
+      ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
+      ttq.setAndDefer = function (t, e) {
+        t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))); };
+      };
+      for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+      ttq.instance = function (t) {
+        for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
+        return e;
+      };
+      ttq.load = function (e, n) {
+        var r = "https://analytics.tiktok.com/i18n/pixel/events.js", o = n && n.partner;
+        ttq._i = ttq._i || {};
+        ttq._i[e] = [];
+        ttq._i[e]._u = r;
+        ttq._t = ttq._t || {};
+        ttq._t[e] = +new Date;
+        ttq._o = ttq._o || {};
+        ttq._o[e] = n || {};
+        n = document.createElement("script");
+        n.type = "text/javascript";
+        n.async = !0;
+        n.src = r + "?sdkid=" + e + "&lib=" + t;
+        e = document.getElementsByTagName("script")[0];
+        e.parentNode.insertBefore(n, e);
+      };
+      ttq.load("DA51NHBC77UES973SLKG");
+      ttq.page();
+    }(window, document, "ttq");
+  </script>
+  <!-- TikTok Pixel Code End -->
+</head>
+<body>
+  <main class="page">
+    <i class="side-orb orb-one"></i>
+    <i class="side-orb orb-two"></i>
+    <header class="hero">
+      <div class="topline">
+        <div class="brand">✦ لمعة مكة للخدمات المنزلية</div>
+        <div class="location">📍 مكة المكرمة</div>
+      </div>
+      <div class="hero-content">
+        <span class="eyebrow">نظافة تدوم وراحة تستحقها</span>
+        <h1>بيتك أنظف…<br>وحياتك أهدأ</h1>
+        <p>حلول احترافية لنظافة المنازل والخزانات، العزل ومكافحة الحشرات في مكة — نصل إليك ونترك المكان بلمعة تليق بك.</p>
+        <div class="hero-actions">
+          <a class="btn btn-call" href="tel:0555053457">☎ اتصل الآن</a>
+          <a class="btn btn-wa" href="https://wa.me/966555053457" target="_blank" rel="noopener">◉ واتساب</a>
+        </div>
+      </div>
+    </header>
+    <section class="content">
+      <h2 class="section-title">خدماتنا <span>لكل زاوية</span></h2>
+      <div class="services">
+        <article class="service"><div class="icon">♨️</div><b>تنظيف بالبخار</b></article>
+        <article class="service"><div class="icon">🏠</div><b>تنظيف منازل</b></article>
+        <article class="service"><div class="icon">💧</div><b>تنظيف خزانات</b></article>
+        <article class="service"><div class="icon">🛡️</div><b>عزل خزانات</b></article>
+        <article class="service"><div class="icon">🪳</div><b>مكافحة حشرات</b></article>
+      </div>
+      <div class="features">
+        <div class="feature"><div class="icon check">✓</div><div><strong>فريق متخصص</strong><small>خبرة وعناية في كل تفصيلة</small></div></div>
+        <div class="feature"><div class="icon check">✓</div><div><strong>مواد آمنة</strong><small>حلول فعّالة مناسبة للمنزل</small></div></div>
+        <div class="feature"><div class="icon check">✓</div><div><strong>خدمة داخل مكة</strong><small>مواعيد مرنة ووصول سريع</small></div></div>
+      </div>
+      <section class="contact" id="contact">
+        <div>
+          <h2>جاهزين نخدمك اليوم</h2>
+          <p>اتصل أو راسلنا على واتساب للحجز والاستفسار</p>
+          <a class="number" href="tel:0555053457">055 505 3457</a>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="tel:0555053457">☎ اتصال مباشر</a>
+          <a class="btn btn-wa" href="https://wa.me/966555053457" target="_blank" rel="noopener">◉ راسلنا واتساب</a>
+        </div>
+      </section>
+      <footer>© <span id="year"></span> لمعة مكة — نظافة بثقة في مكة المكرمة</footer>
+    </section>
+  </main>
+  <a class="float-wa" href="https://wa.me/966555053457" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب">◉</a>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="tel:"], a[href*="wa.me"]').forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (window.ttq && typeof window.ttq.track === "function") {
+          window.ttq.track("Contact", {
+            contact_method: link.href.indexOf("wa.me") > -1 ? "whatsapp" : "phone"
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
